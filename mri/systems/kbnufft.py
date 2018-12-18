@@ -691,7 +691,6 @@ def main():
     import matplotlib.pyplot as plt
 
     x = np.double(data.camera()[::2, ::2])
-    x = x * np.exp(1j*np.random.normal(size=x.shape)*10)
 
     spokelength = 256
     nspokes = 405

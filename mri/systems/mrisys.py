@@ -129,7 +129,7 @@ def main():
     from skimage import data
     import matplotlib.pyplot as plt
     sys.path.append('./')
-    from mriutils import mrisensesim
+    from mri import mrisensesim
     from kbnufft import KbNufft
 
     print('running test script')

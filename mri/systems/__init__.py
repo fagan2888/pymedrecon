@@ -1,3 +1,3 @@
 from . import kbnufft
-from . import mri
+from . import mrisys
 from . import mridft
