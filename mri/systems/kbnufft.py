@@ -62,7 +62,8 @@ class KbNufft(object):
         usetable (boolean, default=True): Use table interpolation instead of
             sparse matrix, saving memory.
         table_oversamp (int, default=2^10): Table oversampling factor.
-        order (ind, default=0): Order of Kaiser-Bessel kernel.
+        order (ind, default=0): Order of Kaiser-Bessel kernel. Not currently
+            implemented.
 
     Examples:
         Initialization:
@@ -254,7 +255,8 @@ class KbInterp(object):
         usetable (boolean, default=True): Use table interpolation instead of
             sparse matrix.
         table_oversamp (int, default=2^10): Table oversampling factor.
-        order (ind, default=0): Order of Kaiser-Bessel kernel.
+        order (ind, default=0): Order of Kaiser-Bessel kernel. Not currently
+            implemented.
 
     Examples:
         Initialization:
