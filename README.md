@@ -20,7 +20,7 @@ Any documentation for that function should be displayed in the terminal.
 - mri: tools for magnetic resonance imaging reconstruction
   - systems.mri: a Python object for forward and adjoints with senstivity coils
   - systems.dft: a Python object that is essentially a DFT wrapper
-  - systems.kbnufft: a Python object for non-uniform FFTs in pure numpy
+  - systems.kbnufft: a Python object for non-uniform FFTs in numpy
   - mrisensesim: sensitivity coil simulation
 
 ## Test scripts
