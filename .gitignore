@@ -1,0 +1,6 @@
+__pycache__/
+tensorboardX/
+archive/
+*.pyc
+*.swp
+.vscode/*
