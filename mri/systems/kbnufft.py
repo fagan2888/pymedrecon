@@ -286,9 +286,9 @@ class KbInterp(object):
             self.n_shift = tuple(np.array(self.im_size) // 2)
         else:
             self.n_shift = n_shift
-        if numpoints is 6:
+        if numpoints == 6:
             self.numpoints = (6,) * len(self.grid_size)
-        elif len(numpoints) is not len(self.grid_size):
+        elif len(numpoints) != len(self.grid_size):
             self.numpoints = (numpoints,) * len(self.grid_size)
         else:
             self.numpoints = numpoints
