@@ -22,6 +22,7 @@ Any documentation for that function should be displayed in the terminal.
   - systems.dft: a Python object that is essentially a DFT wrapper
   - systems.kbnufft: a Python object for non-uniform FFTs in numpy
   - mrisensesim: sensitivity coil simulation
+  - calc_smap_espirit.py: estimation of sensitivity coils via ESPIRiT
 
 ## Test scripts
 
