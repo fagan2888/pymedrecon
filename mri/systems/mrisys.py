@@ -74,7 +74,7 @@ class Mri(object):
             y = self.encodeob.forw(x)
         elif self.multiprocessing:
             with Pool() as pool:
-                y = np.array(pool.map(self.encodeob.forw, list(x)))
+                y = np.array(pool.map(self.encodeob.forw, x))
         else:
             y = []
             for i in range(self.numcoils):
@@ -98,7 +98,7 @@ class Mri(object):
             x = self.encodeob.back(y)
         elif self.multiprocessing:
             with Pool() as pool:
-                x = np.array(pool.map(self.encodeob.back, list(y)))
+                x = np.array(pool.map(self.encodeob.back, y))
         else:
             x = []
             for i in range(self.numcoils):
@@ -155,7 +155,7 @@ def main():
 
     smap = mrisensesim(size=x.shape, coil_width=20)
 
-    mriob = Mri(np.array(smap), encodeob=nufftob, multiprocessing=False)
+    mriob = Mri(np.array(smap), encodeob=nufftob, multiprocessing=True)
 
     y = mriob.forw(x)
 
