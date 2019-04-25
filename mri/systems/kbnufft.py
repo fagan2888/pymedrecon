@@ -705,9 +705,9 @@ def main():
         kx[:, i] = np.cos(ga)*kx[:, i-1] - np.sin(ga)*ky[:, i-1]
         ky[:, i] = np.sin(ga)*kx[:, i-1] + np.cos(ga)*ky[:, i-1]
 
-    # plt.plot(kx, ky)
-    # plt.title('kspace trajectory')
-    # plt.show()
+    plt.plot(kx, ky)
+    plt.title('kspace trajectory')
+    plt.show()
 
     ky = np.transpose(ky)
     kx = np.transpose(kx)
@@ -721,6 +721,12 @@ def main():
 
     startmat = time.time()
     y_mat = matob.forw(x)
+    y_mat = np.reshape(y_mat, (nspokes, spokelength))
+    ramp = np.absolute(np.linspace(-1, 1, spokelength))
+    ramp[ramp < 1/nspokes] = 1/nspokes
+    y_mat = y_mat * ramp[np.newaxis, :]
+    y_mat = y_mat.flatten()
+    print(y_mat.shape)
     recon_mat = matob.back(y_mat)
     endmat = time.time()
 
